@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901092729) do
+ActiveRecord::Schema.define(version: 20150901135218) do
 
   create_table "weddings", force: :cascade do |t|
     t.string   "bride_name"
@@ -21,8 +21,20 @@ ActiveRecord::Schema.define(version: 20150901092729) do
     t.string   "title"
     t.string   "description"
     t.text     "story"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "bride_image_file_name"
+    t.string   "bride_image_content_type"
+    t.integer  "bride_image_file_size"
+    t.datetime "bride_image_updated_at"
+    t.string   "groom_image_file_name"
+    t.string   "groom_image_content_type"
+    t.integer  "groom_image_file_size"
+    t.datetime "groom_image_updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
 end

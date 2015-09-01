@@ -1,39 +1,33 @@
 <p id="notice"><%= notice %></p>
+<div class="jumbotron">
+<%= image_tag @wedding.cover.url(:medium) %>
 
-<p>
-  <strong>Bride name:</strong>
-  <%= @wedding.bride_name %>
-</p>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <h2>Gelin</h2>
+   <h3><%= @wedding.bride_name %></h3>
+    <%= image_tag @wedding.bride_image.url(:medium) %>  
+  </div>
 
-<p>
-  <strong>Groom name:</strong>
-  <%= @wedding.groom_name %>
-</p>
-
-<p>
-  <strong>Wedding date:</strong>
-  <%= @wedding.wedding_date %>
-</p>
-
-<p>
-  <strong>Wedding location:</strong>
-  <%= @wedding.wedding_location %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @wedding.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
+  <div class="col-md-6">
+    <h2>Damat</h2>
+    <h3><%= @wedding.groom_name %></h3>   
+    <%= image_tag @wedding.groom_image.url(:medium) %>  
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+  <p>
+  <strong>Düğün : <%= @wedding.wedding_date %> tarihinde <%= @wedding.wedding_location %> düğün salonunda yapılacaktır </strong>
   <%= @wedding.description %>
-</p>
-
-<p>
-  <strong>Story:</strong>
+  </p>
+  </div>
+  <div class="col-md-8">
+  <strong>Hikayemiz:</strong>
   <%= @wedding.story %>
-</p>
+  </div>
+</div>
 
 <%= link_to 'Edit', edit_wedding_path(@wedding) %> |
 <%= link_to 'Back', weddings_path %>
