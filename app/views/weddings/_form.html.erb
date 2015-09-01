@@ -1,0 +1,45 @@
+<%= form_for(@wedding) do |f| %>
+  <% if @wedding.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wedding.errors.count, "error") %> prohibited this wedding from being saved:</h2>
+
+      <ul>
+      <% @wedding.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :bride_name %><br>
+    <%= f.text_field :bride_name %>
+  </div>
+  <div class="field">
+    <%= f.label :groom_name %><br>
+    <%= f.text_field :groom_name %>
+  </div>
+  <div class="field">
+    <%= f.label :wedding_date %><br>
+    <%= f.date_select :wedding_date %>
+  </div>
+  <div class="field">
+    <%= f.label :wedding_location %><br>
+    <%= f.text_field :wedding_location %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :story %><br>
+    <%= f.text_area :story %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

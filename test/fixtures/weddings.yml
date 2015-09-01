@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bride_name: MyString
+  groom_name: MyString
+  wedding_date: 2015-09-01
+  wedding_location: MyString
+  title: MyString
+  description: MyString
+  story: MyText
+
+two:
+  bride_name: MyString
+  groom_name: MyString
+  wedding_date: 2015-09-01
+  wedding_location: MyString
+  title: MyString
+  description: MyString
+  story: MyText

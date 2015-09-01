@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bride name:</strong>
+  <%= @wedding.bride_name %>
+</p>
+
+<p>
+  <strong>Groom name:</strong>
+  <%= @wedding.groom_name %>
+</p>
+
+<p>
+  <strong>Wedding date:</strong>
+  <%= @wedding.wedding_date %>
+</p>
+
+<p>
+  <strong>Wedding location:</strong>
+  <%= @wedding.wedding_location %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @wedding.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @wedding.description %>
+</p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @wedding.story %>
+</p>
+
+<%= link_to 'Edit', edit_wedding_path(@wedding) %> |
+<%= link_to 'Back', weddings_path %>
