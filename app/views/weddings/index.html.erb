@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <div class="center">
 <div class="row">
   <% @weddings.each do |wedding| %>
@@ -21,3 +21,4 @@
 </div>
 
 <%= link_to '+', new_wedding_path, class: "btn btn-circle btn-primary" %>
+</div>

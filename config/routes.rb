@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   get 'pages/pricing'
 
- # get 'pages/main'
+  get 'pages/main'
 
   resources :weddings
 
