@@ -1,48 +1,30 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
 
-    <section id="home-slider">
-        <div class="container">
-            <div class="row">
-                <div class="main-slider">
-                    <div class="slide-text">
-                        <h1><%= @wedding.description %></h1>
-                        <p>Düğün : <%= @wedding.wedding_date %> tarihinde <%= @wedding.wedding_location %> düğün salonunda yapılacaktır</p>
-                        <a href="#" class="btn btn-common">Katıl</a>
-                    </div>
-                      <%= image_tag @wedding.cover.url(:medium), class: "slider-hill", alt: "slider image" %>    
-
-                </div>
-            </div>
-        </div>
-        <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
-    </section>
+<div class="jumbotron">
 <div class="row">
-  <div class="col-md-6">
-    <h2>Gelin</h2>
-   <h3><%= @wedding.bride_name %></h3>
-    <%= image_tag @wedding.bride_image.url(:medium) %>  
-  </div>
-
-  <div class="col-md-6">
-    <h2>Damat</h2>
-    <h3><%= @wedding.groom_name %></h3>   
-    <%= image_tag @wedding.groom_image.url(:medium) %>  
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
-  <p>
-  <strong>Düğün : <%= @wedding.wedding_date %> tarihinde <%= @wedding.wedding_location %> düğün salonunda yapılacaktır </strong>
-  <%= @wedding.description %>
-  </p>
+  <div class="col-md-4"
+    <h1><%= @wedding.description %></h1>
+    <p>Düğün : <%= @wedding.wedding_date %> tarihinde <%= @wedding.wedding_location %> düğün salonunda yapılacaktır</p>
+    <p><a class="btn btn-primary btn-lg">RSVP</a></p>
   </div>
   <div class="col-md-8">
-  <strong>Hikayemiz:</strong>
-  <%= @wedding.story %>
+    <div class="col-md-4">
+      <h2><%= @wedding.bride_name %></h2>
+      <%= image_tag @wedding.bride_image.url(:medium), class: "img-circle" %>
+    </div>
+    <div class="col-md-4">
+      <h2><%= @wedding.groom_name %></h2>
+      <%= image_tag @wedding.groom_image.url(:medium), class: "img-circle" %>
+    </div>
+  </div>
   </div>
 </div>
+
+<div class="col-md-12">
+<p><%= @wedding.story %>
+</p>
+</div>
+
 
 <%= link_to 'Edit', edit_wedding_path(@wedding), class: "btn btn-warning" %> |
 <%= link_to 'Back', weddings_path, class: "btn btn-info" %>
-</div>
