@@ -12,53 +12,76 @@
   <% end %>
 <div class="col-md-6">
   <div class="field">
-    <%= f.label :bride_name %><br>
+    <%= f.label :bride_name %>
     <%= f.text_field :bride_name, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :groom_name %><br>
+    <%= f.label :bride_image %>
+    <%= f.file_field :bride_image, class: "form-control" %>
+    
+  </div>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
+   </div>
+</div>
+<div class="col-md-6">  
+  <div class="field">
+    <%= f.label :groom_name %>
     <%= f.text_field :groom_name, class: "form-control" %>
   </div>
   <div class="field">
-    <%= f.label :wedding_date %><br>
-    <%= f.date_select :wedding_date, class: "form-control" %>
-  </div>
-</div>
-<div class="col-md-6">  
-  <div class="field">
-    <%= f.label :wedding_location %><br>
-    <%= f.text_field :wedding_location, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description, class: "form-control" %>
-  </div>
-</div>
-<div class="col-md-6">  
-  <div class="field">
-    <%= f.label :story %><br>
-    <%= f.text_area :story, class: "form-control" %>
-  </div>
-  <div class="field">
-    <%= f.label :groom_image %><br>
+    <%= f.label :groom_image %>
     <%= f.file_field :groom_image, class: "form-control" %>
   </div>
-    <div class="field">
-    <%= f.label :bride_image %><br>
-    <%= f.file_field :bride_image, class: "form-control" %>
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_field :description, class: "form-control" %>  
+  </div>
+</div>
+<div class="col-md-6">  
+  <div class="field">
+    <%= f.label :wedding_date %>
+    <%= f.date_select :wedding_date, class: "form-control" %>
   </div>
   </div>
 <div class="col-md-6">  
   <div class="field">
-    <%= f.label :cover %><br>
+    <%= f.label :wedding_location %>
+    <%= f.text_field :wedding_location, class: "form-control" %>  
+  </div>
+<div class="field">
+    <%= f.label :cover %>
     <%= f.file_field :cover, class: "form-control" %>
-  </div>    
-  <div class="actions">
-   <p> <%= f.submit class: "btn btn-default" %></p>
+</div>    
+</div>
+<div class="col-md-12">
+  <div class="field">
+    <h2><%= f.label :story %><br>
+    <%= f.bootsy_area :story, class: "form-control" %>
+  </div>
+    <div class="actions">
+    <p><%= f.submit class: "btn btn-default" %></p>
   </div>
 </div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    
+

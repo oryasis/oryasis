@@ -21,10 +21,12 @@
 </div>
 
 <div class="col-md-12">
-<p><%= @wedding.story %>
+<p>
+<%= raw @wedding.story%>
 </p>
+<%= link_to 'Edit', edit_wedding_path(@wedding), class: "btn btn-warning" %> |
+<%= link_to 'Back', weddings_path, class: "btn btn-info" %>
 </div>
 
 
-<%= link_to 'Edit', edit_wedding_path(@wedding), class: "btn btn-warning" %> |
-<%= link_to 'Back', weddings_path, class: "btn btn-info" %>
+
