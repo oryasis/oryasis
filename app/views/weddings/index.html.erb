@@ -5,13 +5,13 @@
   <% @weddings.each do |wedding| %>
       <div class="col-md-3">
         <div class="thumbnail">
-        <%= image_tag wedding.cover.url(:small) %>
+        <%= image_tag wedding.cover.url(:medium) %>
         </div>
         <div class="caption">
           <h3><span class="label label-info"><%= wedding.wedding_date %></span></h3>
           <strong><a href="#"><%= wedding.title %></a></strong><br>
           <em><%= wedding.wedding_location %></em><br>
-          <span class="small"><a href="">#<%= wedding.groom_name %><%= wedding.bride_name %>evleniyor</a></span>
+          <span class="small"><a href="">#<%= wedding.groom_name %>ve<%= wedding.bride_name %>evleniyor</a></span>
           <%= link_to 'Göster', wedding, class: "btn btn-info btn-xs" %>
         </div>
       </div>

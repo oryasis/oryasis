@@ -14,7 +14,7 @@ gem "paperclip", "~> 4.3"
 gem "font-awesome-rails"
 gem 'bootsy'
 gem 'twitter'
-
+gem 'devise'
 
 group :development, :test do
   gem 'byebug'
