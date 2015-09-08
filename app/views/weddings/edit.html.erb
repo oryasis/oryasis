@@ -2,6 +2,7 @@
 <div class="container">
 <%= render 'form' %>
 <%= link_to 'Show', @wedding, class: "btn btn-warning" %> |
+<%= link_to 'Destroy', @wedding, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %> |
 <%= link_to 'Back', weddings_path, class: "btn btn-danger" %>
 </div>
 

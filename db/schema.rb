@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150907191421) do
+ActiveRecord::Schema.define(version: 20150907195629) do
 
   create_table "bootsy_image_galleries", force: :cascade do |t|
     t.integer  "bootsy_resource_id"
@@ -27,23 +27,6 @@ ActiveRecord::Schema.define(version: 20150907191421) do
     t.datetime "updated_at"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.integer  "commentable_id"
-    t.string   "commentable_type"
-    t.string   "title"
-    t.text     "body"
-    t.string   "subject"
-    t.integer  "user_id",          null: false
-    t.integer  "parent_id"
-    t.integer  "lft"
-    t.integer  "rgt"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
-
   create_table "pictures", force: :cascade do |t|
     t.string   "gallery_image_file_name"
     t.string   "gallery_image_content_type"
@@ -54,24 +37,8 @@ ActiveRecord::Schema.define(version: 20150907191421) do
     t.datetime "updated_at",                 null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "name"
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "weddings", force: :cascade do |t|
     t.string   "bride_name"
